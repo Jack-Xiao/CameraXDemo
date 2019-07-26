@@ -43,7 +43,7 @@ class CameraActivity : AppCompatActivity() {
     }
 
 
-    fun bindCameraUseCases() {
+    private fun bindCameraUseCases() {
         val metrics = DisplayMetrics().also { view_finder.display.getRealMetrics(it) }
         val screenAspectRatio = Rational(metrics.widthPixels, metrics.heightPixels)
         // Set up the view finder use case to display camera preview
@@ -61,7 +61,7 @@ class CameraActivity : AppCompatActivity() {
     }
 
 
-    fun updateCameraUi() {
+    private fun updateCameraUi() {
 
         //切换前置镜头与后置镜头
         camera_switch_button.setOnClickListener {
